@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	:root {
+		--text: 4 11 10;
+		--background: 251 254 253;
+		--primary: 66 209 183;
+		--secondary: 147 234 218;
+		--accent: 96 231 207;
+	}
+	.dark {
+		--text: 244 251 250;
+		--background: 1 4 3;
+		--primary: 46 189 163;
+		--secondary: 21 106 91;
+		--accent: 24 160 135;
+	}
+
+	body {
+		font-family: "Open Sans", sans-serif;
+	}
+}
