@@ -1,5 +1,5 @@
 import { VariantProps, cva } from "class-variance-authority";
-
+import { cn } from "../ults/cn";
 const variants = cva("block overflow-hidden", {
 	variants: {
 		size: {
@@ -28,18 +28,27 @@ export interface Props
 	alt: string;
 	size?: "default" | "sm" | "md" | "lg" | "xl" | "avatar";
 	rounded?: "none" | "circle";
+	other: string | undefined;
+	className: string | undefined;
 }
 
-function Image({
-	className: string,
-	src,
-	alt,
-	size,
-	rounded,
-	...props
-}: Props) {
+function Image({ className, src, alt, size, rounded, other, ...props }: Props) {
 	return (
-		<div className={variants({ className: string, size, rounded })} {...props}>
+		<div
+			className={cn(
+				variants({
+					className,
+					src,
+					alt,
+					size,
+					rounded: rounded,
+					other,
+					...props,
+				}),
+				other
+			)}
+			{...props}
+		>
 			<img src={src} alt={alt} className="w-full h-full" />
 		</div>
 	);

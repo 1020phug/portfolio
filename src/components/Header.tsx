@@ -115,7 +115,7 @@ export function Header(props: IHeaderProps) {
 							href="https://www.facebook.com/1020phug"
 							target="_blank"
 							rel="noopener noreferrer"
-							className="hover:-translate-y-2 transition-all duration-300 delay-50"
+							className="hover:-translate-y-2 transition-all duration-300 delay-50 hidden md:block"
 						>
 							<FaFacebook size={24} className="text-text" />
 						</a>
@@ -123,7 +123,7 @@ export function Header(props: IHeaderProps) {
 							href="https://github.com/1020phug"
 							target="_blank"
 							rel="noopener noreferrer"
-							className="hover:-translate-y-2 transition-all duration-300 delay-50"
+							className="hover:-translate-y-2 transition-all duration-300 delay-50 hidden md:block"
 						>
 							<FaGithub size={24} className="text-text" />
 						</a>
